@@ -34,7 +34,7 @@ const Register = () => {
                     });
                     break;
                 default:
-                    console.log("Error server.");    
+                    console.log("Error server auth.");    
             }
         }
     }
