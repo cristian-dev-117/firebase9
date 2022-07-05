@@ -24,13 +24,17 @@ const Register = () => {
         } catch (error) {
             switch(error.code ) {
                 case "auth/email-already-in-use":
-                    console.log("Ya esta registrado este correo", error);
                     setError('email',{
                         message:"Ya esta registrado este correo"
                     });
                     break;
+                case "auth/invalid-email":
+                    setError('email',{
+                        message:"Formato email invalido"
+                    });
+                    break;
                 default:
-                    console.log("Error server");    
+                    console.log("Error server.");    
             }
         }
     }
